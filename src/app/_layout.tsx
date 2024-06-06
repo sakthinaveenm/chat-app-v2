@@ -1,11 +1,15 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { Stack } from 'expo-router'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const RootLayout = () => {
   return (
-    <View>
-      <Text>RootLayout</Text>
-    </View>
+    <SafeAreaView style={{ flex : 1 }}>
+   <Stack>
+    <Stack.Screen name='chat' options={{ headerShown : false }}  />
+   </Stack>
+   </SafeAreaView>
   )
 }
 
